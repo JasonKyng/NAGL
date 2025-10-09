@@ -1,4 +1,6 @@
 # [Normal-Abnormal Guided Generalist Anomaly Detection](https://arxiv.org/abs/2510.00495)
+[![project](https://img.shields.io/badge/Project-NAGL-green)](https://github.com/JasonKyng/NAGL)    [![arXiv](https://img.shields.io/badge/arXiv-2510.00495-b31b1b)](https://arxiv.org/pdf/2510.00495)  [![huggingface](https://img.shields.io/badge/Huggingface-NAGL-yellow)](https://huggingface.co/papers/2510.00495)   <a href="#LICENSE--citation"><img alt="License: MIT" src="https://img.shields.io/badge/LICENSE-MIT-blue.svg"/></a>
+
 PyTorch implementation for our NeurIPS 2025 paper, Normal-Abnormal Guided Generalist Anomaly Detection.
 
 ![Framework](assets/framework.png)
