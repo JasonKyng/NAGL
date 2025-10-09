@@ -154,10 +154,7 @@ def create_summary_worksheet(results_path: Path, titles: List, all_data: np.ndar
 
 if __name__ == "__main__":
     results_root = 'results/dinov2_vits14_448'
-    # setting_tag = 'aml_672_a25_PreTra_lr_e-5_resv_resk_wo_merge'
     setting_tag = 'default'
-    # setting_tag = 'aml_base_avg05'
-    # setting_tag = 'aml_a25_PreTra_match_a_loss_lr_e-5'
     n_shots = [1, 2, 4]
     a_shots = [1]
     num_seeds = 3
