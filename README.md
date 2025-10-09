@@ -61,8 +61,9 @@ pip install -r requirements.txt
     python dataset_preparation/visa.py
     # ...
     ```
-
 > **Note:** The dataset collection process is implemented in python class [`FSDataset`](./utils/dataset.py). And we also provide detailed instructions in **Appendix A** of our paper.
+
+>*We currently recommend using the MVtecAD and VisA datasets. Full processing for other datasets (BraTS, MPDD, MVTec3D, ...) will be provided soon.*
 
 ### Training and Evaluation
 
