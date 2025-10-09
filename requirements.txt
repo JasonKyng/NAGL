@@ -1,0 +1,16 @@
+# Extra index url to install torch with cuda 11.8
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+numpy==1.26.4
+pillow==11.0.0
+einops==0.8.1
+tqdm==4.66.2
+scipy==1.13.0
+scikit-learn==1.4.2
+openpyxl==3.1.5
+tifffile==2025.5.10
+ADEval==1.1.0
+torch==2.1.1+cu118
+torchaudio==2.1.1+cu118
+torchvision==0.16.1+cu118
+xformers==0.0.23+cu118
