@@ -1,10 +1,6 @@
 # [Normal-Abnormal Guided Generalist Anomaly Detection](https://arxiv.org/abs/2510.00495)
 PyTorch implementation for our NeurIPS 2025 paper, Normal-Abnormal Guided Generalist Anomaly Detection.
 
-<!-- [**Normal-Abnormal Guided Generalist Anomaly Detection**](https://arxiv.org/abs/2510.00495) -->
-
-<!-- Yuexin Wang, Xiaolei Wang, Yizheng Gong, Jimin Xiao -->
-
 ![Framework](assets/framework.png)
 >**Overview of our proposed framework.** Given a test image and its corresponding reference images (normal and abnormal), features are extracted through a pre-trained backbone network. The extracted normal features guide the generation of a normal-guided score map. Meanwhile, abnormal features are processed through the RM-AFL module to produce an abnormal-guided score map. This module implements a transformation process: from learnable proxies in vision space to residual proxies capturing normal-abnormal differences in residual space, and finally to anomaly proxies in vision space that highlight specific anomalous regions in the query image. The final anomaly score is computed by merging both normal and abnormal guided score maps.
 
