@@ -13,7 +13,7 @@ if [ "$fold" == "0" ]; then
         --num_seeds 3 \
         --eval_segm \
         --tag default \
-        --data_root /path/to/dataset/visa/mvtec
+        --data_root /path/to/dataset/mvtec
 else
     if [ "$4" == "visa" ]; then
         CUDA_VISIBLE_DEVICES=$1 python test.py \
