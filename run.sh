@@ -10,4 +10,4 @@ if [ "$mode" == "train" ]; then
     sh scripts/train.sh $gpu $save_dir $fold
 fi
 
-sh scripts/test.sh $gpu $save_dir $fold $test_dataset
+sh scripts/test.sh $gpu $save_dir $test_dataset
