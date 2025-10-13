@@ -4,7 +4,7 @@ fold=$3
 
 if [ "$fold" == "0" ]; then
     CUDA_VISIBLE_DEVICES=$1 python test.py \
-        --save_path ./outputs/train_on_visa \
+        --save_path $2 \
         --image_size 448 \
         --dataset MVTec \
         --n_shots 1 2 4 \
