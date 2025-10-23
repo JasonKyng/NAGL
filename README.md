@@ -24,7 +24,7 @@ pip install -r requirements.txt
    /path/to/dataset
     └── dataset_name_1
         ├── class_1
-        │   ├── train
+        │   ├── train/good
         │   │   ├── 000.png
         │   │   ├── 001.png
         │   │   └── ...
