@@ -3,7 +3,7 @@
 if [ "$3" == "mvtec" ]; then
     CUDA_VISIBLE_DEVICES=$1 python test.py \
         --save_path $2 \
-        --image_size 224 \
+        --image_size 448 \
         --dataset MVTec \
         --n_shots 1 2 4 \
         --a_shots 1 \
@@ -11,7 +11,7 @@ if [ "$3" == "mvtec" ]; then
         --num_seeds 3 \
         --eval_segm \
         --tag default \
-        --data_root /gpfs/work/int/yuexinwang23/Datasets/mvtec
+        --data_root /path/to/dataset/mvtec
 elif [ "$3" == "visa" ]; then
     CUDA_VISIBLE_DEVICES=$1 python test.py \
         --save_path $2 \
@@ -23,7 +23,7 @@ elif [ "$3" == "visa" ]; then
         --num_seeds 3 \
         --eval_segm \
         --tag default \
-        --data_root /gpfs/work/int/yuexinwang23/Datasets/visa
+        --data_root /path/to/dataset/visa
 elif [ "$3" == "btad" ]; then
     CUDA_VISIBLE_DEVICES=$1 python test.py \
         --save_path $2 \
@@ -35,7 +35,7 @@ elif [ "$3" == "btad" ]; then
         --num_seeds 3 \
         --eval_segm \
         --tag default \
-        --data_root /gpfs/work/int/yuexinwang23/Datasets/btad
+        --data_root /path/to/dataset/btad
 elif [ "$3" == "brats" ]; then
     CUDA_VISIBLE_DEVICES=$1 python test.py \
         --save_path $2 \
@@ -47,5 +47,5 @@ elif [ "$3" == "brats" ]; then
         --num_seeds 3 \
         --eval_segm \
         --tag default \
-        --data_root /gpfs/work/int/yuexinwang23/Datasets/brats
+        --data_root /path/to/dataset/brats
 fi
