@@ -197,14 +197,15 @@ class NAGL(nn.Module):
             _, support_a_mask = self.nn_search(query_feat, support_a_feat, support_a_mask_)
 
             if args.n_shot==0: # only abnormal as reference, abtain normal reference from abnormal image
-                support_n_feat = support_a_feat.masked_select(support_a_mask.bool()).view(support_a_feat.shape[0], 1, -1, support_a_feat.shape[-1]) 
-                n_pseudo_mask, support_n_mask = self.nn_search(query_feat, support_a_feat, 1-support_a_mask)
+                support_n_feat = support_a_feat.masked_select((1-support_a_mask).bool()).view(support_a_feat.shape[0], 1, -1, support_a_feat.shape[-1]) 
+                n_pseudo_mask, support_n_mask = self.nn_search(query_feat, support_a_feat, 1-support_a_mask_)
                 s_n = n_pseudo_mask.squeeze(-1)
 
             # RM Module forward
             support_res_feat = self.get_res_feat(support_a_feat, support_n_feat)
             residual_proxies = self.attention_forward(self.rm_ca, self.rm_sa, self.learnable_proxies, support_a_feat, support_res_feat, support_a_mask)
 
+            # AFL Module forward
             query_res_feat = self.get_res_feat(query_feat, support_n_feat)
             anomaly_proxies = self.attention_forward(self.afl_ca, self.afl_sa, residual_proxies, query_res_feat, query_feat, None).unsqueeze(1)
             
